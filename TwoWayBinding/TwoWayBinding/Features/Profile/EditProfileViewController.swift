@@ -10,6 +10,21 @@ import UIKit
 import RxSwift
 import Intrepid
 
+/**
+ NOTE: Normally you would extract this into its own file, but it lives here for
+ the purpose of discovery.  This is how easy it is to make a reactive extension.
+ RxCocoa has plenty of examples, so if you need to create a custom one, you can
+ reference that codebase as a launching point.
+ */
+import RxCocoa
+extension Reactive where Base: UIView {
+    var backgroundColor: UIBindingObserver<Base, UIColor?> {
+        return UIBindingObserver(UIElement: self.base) { view, color in
+            view.backgroundColor = color
+        }
+    }
+}
+
 class EditProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
     @IBOutlet private weak var emailTextField: UITextField!
@@ -99,13 +114,3 @@ class EditProfileViewController: UIViewController, UIPickerViewDataSource, UIPic
         return gender.displayText
     }
 }
-
-import RxCocoa
-extension Reactive where Base: UIView {
-    var backgroundColor: UIBindingObserver<Base, UIColor?> {
-        return UIBindingObserver(UIElement: self.base) { view, color in
-            view.backgroundColor = color
-        }
-    }
-}
-
