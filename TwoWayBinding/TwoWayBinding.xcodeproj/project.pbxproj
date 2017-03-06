@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		A2DEF85FD20C86D2BB2C2199 /* Pods_TwoWayBinding.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 326762DE69EE4AEAA570A2C9 /* Pods_TwoWayBinding.framework */; };
+		FF6486791E6E280000DDB3A1 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF6486781E6E280000DDB3A1 /* Profile.swift */; };
+		FF64867B1E6E280B00DDB3A1 /* Gender.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64867A1E6E280B00DDB3A1 /* Gender.swift */; };
+		FF64867D1E6E282300DDB3A1 /* EditProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF64867C1E6E282300DDB3A1 /* EditProfileViewModel.swift */; };
 		FFE6DE731DECB3DF00BF905A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFE6DE721DECB3DF00BF905A /* AppDelegate.swift */; };
 		FFE6DE7A1DECB3DF00BF905A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFE6DE791DECB3DF00BF905A /* Assets.xcassets */; };
 		FFE6DE7D1DECB3DF00BF905A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFE6DE7B1DECB3DF00BF905A /* LaunchScreen.storyboard */; };
@@ -19,6 +22,9 @@
 		326762DE69EE4AEAA570A2C9 /* Pods_TwoWayBinding.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TwoWayBinding.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE6DA5EB959D9F89F29E33BD /* Pods-TwoWayBinding.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoWayBinding.release.xcconfig"; path = "Pods/Target Support Files/Pods-TwoWayBinding/Pods-TwoWayBinding.release.xcconfig"; sourceTree = "<group>"; };
 		E8B9FEB378558C4E1B0B3292 /* Pods-TwoWayBinding.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TwoWayBinding.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TwoWayBinding/Pods-TwoWayBinding.debug.xcconfig"; sourceTree = "<group>"; };
+		FF6486781E6E280000DDB3A1 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FF64867A1E6E280B00DDB3A1 /* Gender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Gender.swift; sourceTree = "<group>"; };
+		FF64867C1E6E282300DDB3A1 /* EditProfileViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		FFE6DE6F1DECB3DF00BF905A /* TwoWayBinding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwoWayBinding.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFE6DE721DECB3DF00BF905A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFE6DE791DECB3DF00BF905A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +63,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		FF6486751E6E277100DDB3A1 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FFE6DE841DECB4CA00BF905A /* EditProfileViewController.swift */,
+				FFE6DE851DECB4CA00BF905A /* EditProfileViewController.xib */,
+				FF64867C1E6E282300DDB3A1 /* EditProfileViewModel.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FF6486761E6E27AF00DDB3A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FF6486781E6E280000DDB3A1 /* Profile.swift */,
+				FF64867A1E6E280B00DDB3A1 /* Gender.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FF6486771E6E27C000DDB3A1 /* Features */ = {
+			isa = PBXGroup;
+			children = (
+				FF6486751E6E277100DDB3A1 /* Profile */,
+			);
+			path = Features;
+			sourceTree = "<group>";
+		};
 		FFE6DE661DECB3DF00BF905A = {
 			isa = PBXGroup;
 			children = (
@@ -78,9 +111,9 @@
 		FFE6DE711DECB3DF00BF905A /* TwoWayBinding */ = {
 			isa = PBXGroup;
 			children = (
+				FF6486771E6E27C000DDB3A1 /* Features */,
+				FF6486761E6E27AF00DDB3A1 /* Models */,
 				FFE6DE721DECB3DF00BF905A /* AppDelegate.swift */,
-				FFE6DE841DECB4CA00BF905A /* EditProfileViewController.swift */,
-				FFE6DE851DECB4CA00BF905A /* EditProfileViewController.xib */,
 				FFE6DE791DECB3DF00BF905A /* Assets.xcassets */,
 				FFE6DE7B1DECB3DF00BF905A /* LaunchScreen.storyboard */,
 				FFE6DE7E1DECB3DF00BF905A /* Info.plist */,
@@ -211,7 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF64867B1E6E280B00DDB3A1 /* Gender.swift in Sources */,
 				FFE6DE731DECB3DF00BF905A /* AppDelegate.swift in Sources */,
+				FF64867D1E6E282300DDB3A1 /* EditProfileViewModel.swift in Sources */,
+				FF6486791E6E280000DDB3A1 /* Profile.swift in Sources */,
 				FFE6DE861DECB4CA00BF905A /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
