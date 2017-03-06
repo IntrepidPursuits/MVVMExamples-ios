@@ -61,7 +61,6 @@ class EditProfileViewController: UIViewController, UIPickerViewDataSource, UIPic
         view.addGestureRecognizer(dismissTapGesture)
 
         emailTextField.rx.text <-> viewModel.email >>> disposeBag
-
         emailTextField.rx.backgroundColor <- viewModel.emailBackgroundColor >>> disposeBag
 
         configureDateOfBirthField()
