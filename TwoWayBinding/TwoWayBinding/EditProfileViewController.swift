@@ -12,10 +12,7 @@ import Intrepid
 
 class EditProfileViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
 
-    @IBOutlet private weak var usernameTextField: UITextField!
     @IBOutlet private weak var emailTextField: UITextField!
-    @IBOutlet private weak var firstNameTextField: UITextField!
-    @IBOutlet private weak var lastNameTextField: UITextField!
     @IBOutlet private weak var dateOfBirthTextField: UITextField!
     @IBOutlet private weak var genderTextField: UITextField!
     @IBOutlet private weak var logButton: UIButton!
@@ -48,12 +45,8 @@ class EditProfileViewController: UIViewController, UIPickerViewDataSource, UIPic
         dismissTapGesture.addTarget(self, action: #selector(EditProfileViewController.endEditing))
         view.addGestureRecognizer(dismissTapGesture)
 
-        usernameTextField.rx.text <-> viewModel.username >>> disposeBag
         emailTextField.rx.text <-> viewModel.email >>> disposeBag
-        firstNameTextField.rx.text <-> viewModel.firstName >>> disposeBag
-        lastNameTextField.rx.text <-> viewModel.lastName >>> disposeBag
 
-        usernameTextField.rx.backgroundColor <- viewModel.usernameBackgroundColor >>> disposeBag
         emailTextField.rx.backgroundColor <- viewModel.emailBackgroundColor >>> disposeBag
 
         configureDateOfBirthField()
@@ -118,38 +111,25 @@ extension Reactive where Base: UIView {
 
 class EditProfileViewModel {
 
-    let username: Variable<String?>
     let email: Variable<String?>
-    let firstName: Variable<String?>
-    let lastName: Variable<String?>
     let dateOfBirth: Variable<Date>
     let gender: Variable<Gender>
 
-    let usernameBackgroundColor: Observable<UIColor?>
     let emailBackgroundColor: Observable<UIColor?>
     let dateOfBirthString: Observable<String?>
     let genderString: Observable<String?>
 
     init(profile: Profile) {
-        username = Variable(profile.username)
         email = Variable(profile.email)
-        firstName = Variable(profile.firstName)
-        lastName = Variable(profile.lastName)
         dateOfBirth = Variable(profile.dateOfBirth)
         gender = Variable(profile.gender)
 
-        let validUsername: Observable<Bool> = username.asObservable().map { username in
-            guard let username = username else { return false }
-            return username.characters.count > 2
-        }
         let validEmail: Observable<Bool> = email.asObservable().map { email in
             guard let email = email else { return false }
             return email.contains("@")
         }
 
-        let errorColorMap: ((Bool) -> UIColor) = { $0 ? UIColor.clear : UIColor.red }
-        usernameBackgroundColor = validUsername.map(errorColorMap)
-        emailBackgroundColor = validEmail.map(errorColorMap)
+        emailBackgroundColor = validEmail.map { $0 ? UIColor.clear : UIColor.red }
 
         dateOfBirthString = dateOfBirth.asObservable().map { (date) -> String in
             let dateFormatter = DateFormatter()
@@ -163,27 +143,18 @@ class EditProfileViewModel {
 
 extension EditProfileViewModel: CustomDebugStringConvertible {
     var debugDescription: String {
-        let username = self.username.value ?? ""
         let email = self.email.value ?? ""
-        let firstName = self.firstName.value ?? ""
-        let lastName = self.lastName.value ?? ""
-        return "EditProfileViewModel:\n  username: \(username)\n  email: \(email)\n  firstName:\(firstName)\n  lastName: \(lastName)\n  D.O.B: \(dateOfBirth.value)\n  Gender: \(gender.value.displayText)"
+        return "EditProfileViewModel:\n  email: \(email)\n  D.O.B: \(dateOfBirth.value)\n  Gender: \(gender.value.displayText)"
     }
 }
 
 class Profile {
-    var username: String
     var email: String
-    var firstName: String?
-    var lastName: String?
     var dateOfBirth: Date
     var gender: Gender
 
     init() {
-        username = "dsum"
-        email = "foo@bar.com"
-        firstName = "Donna"
-        lastName = "Summer"
+        email = "donna@summer.com"
         dateOfBirth = Date()
         gender = .female
     }
