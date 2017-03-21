@@ -1,0 +1,41 @@
+PODS:
+  - Alamofire (4.0.1)
+  - AlamofireImage (3.1.0):
+    - Alamofire (~> 4.0)
+  - Intrepid (0.6.1):
+    - Intrepid/Core (= 0.6.1)
+  - Intrepid/Core (0.6.1):
+    - IP-UIKit-Wisdom (= 0.0.9)
+  - IP-UIKit-Wisdom (0.0.9)
+  - OHHTTPStubs (5.2.2):
+    - OHHTTPStubs/Default (= 5.2.2)
+  - OHHTTPStubs/Core (5.2.2)
+  - OHHTTPStubs/Default (5.2.2):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (5.2.2):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (5.2.2):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (5.2.2)
+  - OHHTTPStubs/Swift (5.2.2):
+    - OHHTTPStubs/Core
+
+DEPENDENCIES:
+  - AlamofireImage (~> 3.1)
+  - Intrepid (~> 0.6.1)
+  - OHHTTPStubs
+  - OHHTTPStubs/Swift
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AlamofireImage: bb8c8351c51cb1633bb6be69b6dbbaff37ce65b7
+  Intrepid: a9d08743b129354f3406a4bc040f16c0344f637a
+  IP-UIKit-Wisdom: cd9838571e97427a0c61c05d856eaaca9afd7c1a
+  OHHTTPStubs: 34d9d0994e64fcf8552dbfade5ce82ada913ee31
+
+PODFILE CHECKSUM: d3865984d802500cafef8abe40dc2c15a5b0d51d
+
+COCOAPODS: 1.1.1
