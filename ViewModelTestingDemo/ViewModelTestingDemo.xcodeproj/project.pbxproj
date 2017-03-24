@@ -28,7 +28,6 @@
 		07EBF2A61DC03EA300B8092A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EBF2A41DC03EA300B8092A /* Main.storyboard */; };
 		07EBF2A81DC03EA300B8092A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07EBF2A71DC03EA300B8092A /* Assets.xcassets */; };
 		07EBF2AB1DC03EA300B8092A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07EBF2A91DC03EA300B8092A /* LaunchScreen.storyboard */; };
-		07EBF2C11DC03EA300B8092A /* ViewModelTestingDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBF2C01DC03EA300B8092A /* ViewModelTestingDemoUITests.swift */; };
 		07EBF2CF1DC03F0300B8092A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07EBF2CE1DC03F0300B8092A /* SearchViewController.swift */; };
 		404772DC7930743A0108FDF5 /* Pods_ViewModelTestingDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDC6F7AA43DECC8FE3001F8 /* Pods_ViewModelTestingDemo.framework */; };
 		E34EB1FC1AB3C24630FBC969 /* Pods_ViewModelTestingDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74357F0C3BEF106E4E45CFF7 /* Pods_ViewModelTestingDemoTests.framework */; };
@@ -36,13 +35,6 @@
 
 /* Begin PBXContainerItemProxy section */
 		07EBF2B21DC03EA300B8092A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 07EBF2951DC03EA300B8092A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 07EBF29C1DC03EA300B8092A;
-			remoteInfo = ViewModelTestingDemo;
-		};
-		07EBF2BD1DC03EA300B8092A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 07EBF2951DC03EA300B8092A /* Project object */;
 			proxyType = 1;
@@ -77,9 +69,6 @@
 		07EBF2AC1DC03EA300B8092A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07EBF2B11DC03EA300B8092A /* ViewModelTestingDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTestingDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		07EBF2B71DC03EA300B8092A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		07EBF2BC1DC03EA300B8092A /* ViewModelTestingDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViewModelTestingDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		07EBF2C01DC03EA300B8092A /* ViewModelTestingDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelTestingDemoUITests.swift; sourceTree = "<group>"; };
-		07EBF2C21DC03EA300B8092A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		07EBF2CE1DC03F0300B8092A /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		19C17B984D8FB07B9D24B526 /* Pods-ViewModelTestingDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewModelTestingDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModelTestingDemoTests/Pods-ViewModelTestingDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		2CDCE6AA27CA7879072BAFF8 /* Pods-ViewModelTestingDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViewModelTestingDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-ViewModelTestingDemo/Pods-ViewModelTestingDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -103,13 +92,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E34EB1FC1AB3C24630FBC969 /* Pods_ViewModelTestingDemoTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07EBF2B91DC03EA300B8092A /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,7 +156,6 @@
 			children = (
 				07EBF29F1DC03EA300B8092A /* ViewModelTestingDemo */,
 				07EBF2B41DC03EA300B8092A /* ViewModelTestingDemoTests */,
-				07EBF2BF1DC03EA300B8092A /* ViewModelTestingDemoUITests */,
 				07EBF29E1DC03EA300B8092A /* Products */,
 				BBA67D5AD29D88D8BE31FE58 /* Pods */,
 				8B7B1694963F04704B3D775A /* Frameworks */,
@@ -186,7 +167,6 @@
 			children = (
 				07EBF29D1DC03EA300B8092A /* ViewModelTestingDemo.app */,
 				07EBF2B11DC03EA300B8092A /* ViewModelTestingDemoTests.xctest */,
-				07EBF2BC1DC03EA300B8092A /* ViewModelTestingDemoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -223,15 +203,6 @@
 				079756BC1DCB5AC1008E9F0A /* DateExtensionTests.swift */,
 			);
 			path = ViewModelTestingDemoTests;
-			sourceTree = "<group>";
-		};
-		07EBF2BF1DC03EA300B8092A /* ViewModelTestingDemoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				07EBF2C01DC03EA300B8092A /* ViewModelTestingDemoUITests.swift */,
-				07EBF2C21DC03EA300B8092A /* Info.plist */,
-			);
-			path = ViewModelTestingDemoUITests;
 			sourceTree = "<group>";
 		};
 		8B7B1694963F04704B3D775A /* Frameworks */ = {
@@ -298,24 +269,6 @@
 			productReference = 07EBF2B11DC03EA300B8092A /* ViewModelTestingDemoTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		07EBF2BB1DC03EA300B8092A /* ViewModelTestingDemoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 07EBF2CB1DC03EA300B8092A /* Build configuration list for PBXNativeTarget "ViewModelTestingDemoUITests" */;
-			buildPhases = (
-				07EBF2B81DC03EA300B8092A /* Sources */,
-				07EBF2B91DC03EA300B8092A /* Frameworks */,
-				07EBF2BA1DC03EA300B8092A /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				07EBF2BE1DC03EA300B8092A /* PBXTargetDependency */,
-			);
-			name = ViewModelTestingDemoUITests;
-			productName = ViewModelTestingDemoUITests;
-			productReference = 07EBF2BC1DC03EA300B8092A /* ViewModelTestingDemoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -332,12 +285,6 @@
 						ProvisioningStyle = Automatic;
 					};
 					07EBF2B01DC03EA300B8092A = {
-						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = THP5EV5EJ9;
-						ProvisioningStyle = Automatic;
-						TestTargetID = 07EBF29C1DC03EA300B8092A;
-					};
-					07EBF2BB1DC03EA300B8092A = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = THP5EV5EJ9;
 						ProvisioningStyle = Automatic;
@@ -360,7 +307,6 @@
 			targets = (
 				07EBF29C1DC03EA300B8092A /* ViewModelTestingDemo */,
 				07EBF2B01DC03EA300B8092A /* ViewModelTestingDemoTests */,
-				07EBF2BB1DC03EA300B8092A /* ViewModelTestingDemoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -384,13 +330,6 @@
 				079756B71DCB54EA008E9F0A /* CleanAlbumSearch.json in Resources */,
 				079756B91DCB55E4008E9F0A /* MalformedAlbumSearch.json in Resources */,
 				079756BB1DCB5725008E9F0A /* DeficientAlbumSearch.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		07EBF2BA1DC03EA300B8092A /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,14 +458,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		07EBF2B81DC03EA300B8092A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				07EBF2C11DC03EA300B8092A /* ViewModelTestingDemoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -534,11 +465,6 @@
 			isa = PBXTargetDependency;
 			target = 07EBF29C1DC03EA300B8092A /* ViewModelTestingDemo */;
 			targetProxy = 07EBF2B21DC03EA300B8092A /* PBXContainerItemProxy */;
-		};
-		07EBF2BE1DC03EA300B8092A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 07EBF29C1DC03EA300B8092A /* ViewModelTestingDemo */;
-			targetProxy = 07EBF2BD1DC03EA300B8092A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -661,6 +587,18 @@
 				DEVELOPMENT_TEAM = THP5EV5EJ9;
 				INFOPLIST_FILE = ViewModelTestingDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AlamofireImage\"",
+					"-framework",
+					"\"IP_UIKit_Wisdom\"",
+					"-framework",
+					"\"Intrepid\"",
+					"$(inherited)",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = weber.ViewModelTestingDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
@@ -713,34 +651,6 @@
 			};
 			name = Release;
 		};
-		07EBF2CC1DC03EA300B8092A /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = THP5EV5EJ9;
-				INFOPLIST_FILE = ViewModelTestingDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = weber.ViewModelTestingDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = ViewModelTestingDemo;
-			};
-			name = Debug;
-		};
-		07EBF2CD1DC03EA300B8092A /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				DEVELOPMENT_TEAM = THP5EV5EJ9;
-				INFOPLIST_FILE = ViewModelTestingDemoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = weber.ViewModelTestingDemoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_TARGET_NAME = ViewModelTestingDemo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -767,15 +677,6 @@
 			buildConfigurations = (
 				07EBF2C91DC03EA300B8092A /* Debug */,
 				07EBF2CA1DC03EA300B8092A /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		07EBF2CB1DC03EA300B8092A /* Build configuration list for PBXNativeTarget "ViewModelTestingDemoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				07EBF2CC1DC03EA300B8092A /* Debug */,
-				07EBF2CD1DC03EA300B8092A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
